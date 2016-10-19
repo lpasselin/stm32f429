@@ -94,7 +94,7 @@ TM_KEYPAD_Button_t TM_KEYPAD_Read(void) {
 
 /* Private */
 void TM_KEYPAD_INT_SetColumn(uint8_t column) {
-	/* Set rows high */
+	/* Set columns high */
 	KEYPAD_COLUMN_1_HIGH;
 	KEYPAD_COLUMN_2_HIGH;
 	KEYPAD_COLUMN_3_HIGH;
