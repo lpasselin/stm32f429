@@ -143,7 +143,7 @@ uint8_t TM_KEYPAD_INT_CheckRow(uint8_t column) {
 
 uint8_t TM_KEYPAD_INT_Read(void) {
 	uint8_t check;
-	/* Set row 1 to LOW */
+	/* Set column 1 to LOW */
 	TM_KEYPAD_INT_SetColumn(1);
 	/* Check rows */
 	check = TM_KEYPAD_INT_CheckRow(1);
@@ -151,17 +151,17 @@ uint8_t TM_KEYPAD_INT_Read(void) {
 		return check;
 	}
 	
-	/* Set row 2 to LOW */
+	/* Set column 2 to LOW */
 	TM_KEYPAD_INT_SetColumn(2);
-	/* Check columns */
+	/* Check rows */
 	check = TM_KEYPAD_INT_CheckRow(2);
 	if (check != KEYPAD_NO_PRESSED) {
 		return check;
 	}
 	
-	/* Set row 3 to LOW */
+	/* Set column 3 to LOW */
 	TM_KEYPAD_INT_SetColumn(3);
-	/* Check columns */
+	/* Check rows */
 	check = TM_KEYPAD_INT_CheckRow(3);
 	if (check != KEYPAD_NO_PRESSED) {
 		return check;
